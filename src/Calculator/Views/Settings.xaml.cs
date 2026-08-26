@@ -20,7 +20,7 @@ namespace CalculatorApp
 {
     public sealed partial class Settings : UserControl
     {
-        private const string BUILD_YEAR = "2026";
+        private const string BUILD_YEAR = "2025";
 
         public event Windows.UI.Xaml.RoutedEventHandler BackButtonClick;
 
@@ -34,7 +34,7 @@ namespace CalculatorApp
 
         public Settings()
         {
-            var locService = LocalizationService.GetInstance();
+            var locService = LocalizationSettings.GetInstance();
             var resourceLoader = AppResourceProvider.GetInstance();
 
             InitializeComponent();

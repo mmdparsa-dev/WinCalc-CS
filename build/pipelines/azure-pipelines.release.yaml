@@ -107,6 +107,13 @@ extends:
 
       - template: /build/pipelines/templates/run-unit-tests.yaml@self
         parameters:
+          platform: x64
+          testAppName: Calculator.Tests
+          jobName: ManagedUnitTests
+          treatNoTestsAsError: true
+
+      - template: /build/pipelines/templates/run-unit-tests.yaml@self
+        parameters:
           platform: x86
 
       - template: /build/pipelines/templates/package-msixbundle.yaml@self
